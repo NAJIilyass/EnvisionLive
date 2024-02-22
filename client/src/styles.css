@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+/*Variables--------------------------------------------------------------------------------*/
+:root{
+    /*font*/
+    --font:"Poppins",sans-serif;
+    /*font weight*/
+    --font-normal:400;
+    --font-medium:500;
+    --font-semi-bold:600;
+    --font-bold:700;
+    --font-extra-bold:800;
+    /*colors*/
+    --title-color:#A970FF;
+    --first-color:#0E0E10;
+    --second-color:#18181B;
+    --third-color:#1F1F23;
+    --text-color:#fff;
+    /*---------box-shadow----------------------------------------------------------------------*/
+--shadow:0px 5px 20px 0px rgb(69 67 96 / 10%);
+/*---------border-radius----------------------------------------------------------------------*/
+--border-radius:20px;
+/*-----------------------------------------------------------------------------------------*/
+}
+
+*{
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    margin-left:110px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.grid{
+    display: grid;
+    gap:24px;
+}
+
+textarea{
+    font-family: var(--font);
+    font-size: var(--font-normal);
+}
+body{
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height:1.7;
+}
+h1, h2, h3{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    line-height:1.2;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
