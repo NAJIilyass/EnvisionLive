@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    color: var(--text-color);
+    background-color: var(--second-color);
+    font-size: larger;
+}
+.nav-links{
+    display: flex;
+    gap:30px;
+    font-size: larger;
+}
+.nav-icons{
+    display: flex;
+    gap: 20px;
+}
+.search-bar{
+    width: 250px;
+    height: 40px;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    background: none;
+    color: var(--text-color);
+    padding-left: 10px ;
+}
