@@ -2,7 +2,7 @@
 /*Variables--------------------------------------------------------------------------------*/
 :root{
     /*font*/
-    --font:"Inter", sans-serif;
+    --font:"Inter",Arial,sans-serif;
     /*font weight*/
     --font-normal:400;
     --font-medium:500;

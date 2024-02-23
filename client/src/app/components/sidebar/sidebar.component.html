@@ -5,7 +5,7 @@
     <div *ngFor="let channel of channels" class="channel">
         <div class="channel-div">
             <div>
-                <img class="avatar" src={{channel.avatar}} alt={{channel.name}}>
+                <img class="avatar" src={{channel.avatar}} alt={{channel.name}} [ngClass]="{ 'offline': channel.state === 'offline' }">
             </div>
             <div class="about">
                 <div class="name">{{channel.name}}</div>
@@ -21,7 +21,7 @@
     <div *ngFor="let channel of channels" class="channel">
         <div class="channel-div">
             <div>
-                <img class="avatar" src={{channel.avatar}} alt={{channel.name}}>
+                <img class="avatar" src={{channel.avatar}} alt={{channel.name}} [ngClass]="{ 'offline': channel.state === 'offline' }">
             </div>
             <div class="about">
                 <div class="name">{{channel.name}}</div>

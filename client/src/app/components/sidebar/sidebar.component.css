@@ -38,3 +38,6 @@
     background-color:#FF0000;
     border-radius: 90%;
 }
+.offline{
+    filter:blur(0.5px);
+}

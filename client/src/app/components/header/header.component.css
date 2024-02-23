@@ -8,6 +8,7 @@
     font-size: large;
     height: 10vh;
     width: 100%;
+    box-shadow: 0 10px 4px 0 #000;
 }
 .nav-links{
     display: flex;
@@ -17,6 +18,7 @@
 .nav-icons{
     display: flex;
     gap: 20px;
+    font-size: x-large;
 }
 .search-bar{
     width: 250px;
@@ -26,4 +28,10 @@
     background: none;
     color: var(--text-color);
     padding-left: 10px ;
+}
+.nav-link{
+    font-weight: bold;
+}
+.nav-link:hover{
+    color: var(--title-color);
 }
