@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [ NgFor ],
+  imports: [ NgFor, NgIf ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
@@ -14,41 +14,41 @@ export class SidebarComponent {
       "id": 1,
       "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/dfb5c790-5ea6-4543-bc2b-0f5f79b1f959-profile_image-70x70.png",
       "name": "JitterTed",
-      "category": "Software Devlopement",
+      "category": "Fortnite",
       "views":"900",
-      "state":"active"
+      "state":"live"
     },
     {
       "id": 2,
-      "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/dfb5c790-5ea6-4543-bc2b-0f5f79b1f959-profile_image-70x70.png",
-      "name": "JitterTed",
-      "category": "Software Devlopement",
+      "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/39da49ae-e57f-4fc2-b781-6371440847eb-profile_image-70x70.png",
+      "name": "PrimeRed",
+      "category": "Leage of legends",
       "views":"9k",
-      "state":"active"
+      "state":"live"
     },
     {
       "id": 3,
-      "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/dfb5c790-5ea6-4543-bc2b-0f5f79b1f959-profile_image-70x70.png",
-      "name": "JitterTed",
-      "category": "Software Devlopement",
+      "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/a58575dc-6414-45f7-a2da-a1ea2bed2e1f-profile_image-70x70.png",
+      "name": "Ahmed Sabiri",
+      "category": "Valorant",
       "views":"2.5k",
-      "state":"active"
+      "state":"live"
     },
     {
       "id": 4,
-      "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/dfb5c790-5ea6-4543-bc2b-0f5f79b1f959-profile_image-70x70.png",
-      "name": "JitterTed",
+      "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/8cc62784-f8fb-485c-ad73-5a6053a74db5-profile_image-70x70.jpeg",
+      "name": "TheDevRel",
       "category": "Software Devlopement",
       "views":"850",
-      "state":"active"
+      "state":"live"
     },
     {
       "id": 5,
-      "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/dfb5c790-5ea6-4543-bc2b-0f5f79b1f959-profile_image-70x70.png",
-      "name": "JitterTed",
-      "category": "Software Devlopement",
+      "avatar":"https://static-cdn.jtvnw.net/jtv_user_pictures/d96af87b-949c-4074-ace1-48c1f94533b6-profile_image-70x70.png",
+      "name": "Chaos33",
+      "category": "GTA V",
       "views":"1.2k",
-      "state":"active"
+      "state":"offline"
     },
     
   ];

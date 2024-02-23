@@ -12,14 +12,29 @@
     font-size: small;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 .avatar{
     background-color: #fff;
     border-radius: 90%;
     width: 30px;
     height: 30px;
+}
+.views{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.channel-div{
+    display: flex;
+    gap: 15px;
+}
+.live{
+    width: 8px;
+    height: 8px;
+    background-color:#FF0000;
+    border-radius: 90%;
 }
