@@ -27,6 +27,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*border:1px #FF0000 solid;*/
 }
 .main{
     margin-left:110px;

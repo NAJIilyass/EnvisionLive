@@ -1,1 +1,28 @@
-<p>sidebar works!</p>
+<aside class="sidebar">
+    <div class="channels">
+        <h4>Chaînes suivis</h4>
+    </div>
+    <div *ngFor="let channel of channels" class="channel">
+        <div>
+            <img class="avatar" src={{channel.avatar}} alt={{channel.name}}>
+        </div>
+        <div class="about">
+            <div class="name">{{channel.name}}</div>
+            <div class="category">{{channel.category}}</div>
+        </div>
+        <div class="views">{{channel.views}}</div>
+    </div>
+    <div class="channels">
+        <h4>Chaînes recommandées</h4>
+    </div>
+    <div *ngFor="let channel of channels" class="channel">
+        <div>
+            <img class="avatar" src={{channel.avatar}} alt={{channel.name}}>
+        </div>
+        <div class="about">
+            <div class="name">{{channel.name}}</div>
+            <div class="category">{{channel.category}}</div>
+        </div>
+        <div class="views">{{channel.views}}</div>
+    </div>
+</aside>

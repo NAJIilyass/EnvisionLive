@@ -1,15 +1,18 @@
 .header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 30px;
     color: var(--text-color);
     background-color: var(--second-color);
-    font-size: larger;
+    font-size: large;
+    height: 10vh;
+    width: 100%;
 }
 .nav-links{
     display: flex;
     gap:30px;
-    font-size: larger;
+    font-size: large;
 }
 .nav-icons{
     display: flex;
