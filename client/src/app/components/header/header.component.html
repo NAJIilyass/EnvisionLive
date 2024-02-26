@@ -12,11 +12,15 @@
     <div>
         <input type="text" class="search-bar" placeholder="Rechercher">
     </div>
-    <div>
+    <div *ngIf="isLogged">
         <ul class="nav-icons">
             <li><ng-icon name="heroSun"></ng-icon></li>
             <li><ng-icon name="heroChatBubbleBottomCenter"></ng-icon></li>
             <li><ng-icon name="heroUser"></ng-icon></li>
         </ul>
+    </div>
+    <div *ngIf="!isLogged" class="nav-buttons">
+        <button class="login">Se connecter</button>
+        <button class="register">S'inscrire</button>
     </div>
 </nav>
