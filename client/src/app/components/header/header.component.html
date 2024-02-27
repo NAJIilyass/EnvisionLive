@@ -20,7 +20,8 @@
         </ul>
     </div>
     <div *ngIf="!isLogged" class="nav-buttons">
-        <button class="login">Se connecter</button>
+        <button class="login" (click)="openLoginDialog()">Se connecter</button>
         <button class="register">S'inscrire</button>
     </div>
 </nav>
+

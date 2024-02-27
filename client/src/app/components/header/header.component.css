@@ -8,7 +8,6 @@
     font-size: large;
     height: 10vh;
     width: 100%;
-    box-shadow: 0 10px 4px 0 #000;
 }
 .nav-links{
     display: flex;
