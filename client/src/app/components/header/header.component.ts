@@ -4,6 +4,7 @@ import { heroUser, heroChatBubbleBottomCenter, heroSun, heroEllipsisVertical } f
 import { NgIf } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-header',
@@ -20,5 +21,8 @@ export class HeaderComponent {
 
   openLoginDialog(): void {
     this.dialog.open(LoginComponent);
+  }
+  openRegisterDialog(): void {
+    this.dialog.open(RegisterComponent);
   }
 }

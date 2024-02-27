@@ -18,7 +18,6 @@ export class LoginComponent {
   constructor(private dialogRef: MatDialogRef<LoginComponent>){}
 
   login(form : NgForm): void{
-
     this.dialogRef.close();
   }
 
