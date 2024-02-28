@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
 import { NgClass, NgFor, NgIf } from '@angular/common';
+import { AuthService } from '../../services/authentication/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [ NgFor, NgIf, NgClass],
+  imports: [ NgFor, NgIf, NgClass, HttpClientModule],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+  styleUrl: './sidebar.component.css',
+  providers: [AuthService]
 })
 export class SidebarComponent {
+
+  constructor(public authService : AuthService){}
+
   channels = [
     {
       "id": 1,

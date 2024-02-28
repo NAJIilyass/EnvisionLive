@@ -2,7 +2,7 @@
     <div>
         <ul class="nav-links">
             <li class="logo">EnvisionLive</li>
-            <li class="nav-link">Suivis</li>
+            <li *ngIf="authService.isLoggedIn" class="nav-link">Suivis</li>
             <li class="nav-link">Parcourir</li>
             <li>
                 <ng-icon name="heroEllipsisVertical" class="nav-link"></ng-icon>
@@ -12,14 +12,14 @@
     <div>
         <input type="text" class="search-bar" placeholder="Rechercher">
     </div>
-    <div *ngIf="isLogged">
+    <div *ngIf="authService.isLoggedIn">
         <ul class="nav-icons">
             <li><ng-icon name="heroSun"></ng-icon></li>
             <li><ng-icon name="heroChatBubbleBottomCenter"></ng-icon></li>
             <li><ng-icon name="heroUser"></ng-icon></li>
         </ul>
     </div>
-    <div *ngIf="!isLogged" class="nav-buttons">
+    <div *ngIf="!authService.isLoggedIn" class="nav-buttons">
         <button class="login" (click)="openLoginDialog()">Se connecter</button>
         <button class="register" (click)="openRegisterDialog()">S'inscrire</button>
     </div>

@@ -5,22 +5,28 @@ import { NgIf } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
+import { AuthService } from '../../services/authentication/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIconComponent, NgIf],
+  imports: [NgIconComponent, NgIf, HttpClientModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
-  viewProviders: [provideIcons({ heroUser , heroChatBubbleBottomCenter, heroSun, heroEllipsisVertical})]
+  viewProviders: [provideIcons({ heroUser , heroChatBubbleBottomCenter, heroSun, heroEllipsisVertical})],
+  providers: [AuthService]
 })
 export class HeaderComponent {
-  isLogged: boolean = false;
 
-  constructor(private dialog: MatDialog){}
+  constructor(
+    private dialog: MatDialog,
+    public authService : AuthService
+    ){}
 
   openLoginDialog(): void {
     this.dialog.open(LoginComponent);
+    console.log(this.authService.isLoggedIn)
   }
   openRegisterDialog(): void {
     this.dialog.open(RegisterComponent);

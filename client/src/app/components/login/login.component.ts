@@ -25,9 +25,9 @@ export class LoginComponent {
 
   login(form : NgForm): void{
     this.authservice.loginUser(form.value).subscribe(response => {
-      console.log(response);
+      console.log('Authentication successful', response);
     }, error => {
-      console.log(error);
+      console.error('Authentication failed', error);
     })
     this.dialogRef.close();
   }

@@ -1,19 +1,21 @@
 <aside class="sidebar">
-    <div class="channels">
-        <h4>Chaînes suivis</h4>
-    </div>
-    <div *ngFor="let channel of channels" class="channel">
-        <div class="channel-div">
-            <div>
-                <img class="avatar" src={{channel.avatar}} alt={{channel.name}} [ngClass]="{ 'offline': channel.state === 'offline' }">
-            </div>
-            <div class="about">
-                <div class="name">{{channel.name}}</div>
-                <div class="category">{{channel.category}}</div>
-            </div>
+    <div *ngIf="authService.isLoggedIn" class="channels-suivis">
+        <div class="channels">
+            <h4>Chaînes suivis</h4>
         </div>
-        <div class="views" *ngIf="channel.state === 'live'"><div class="live"></div>{{channel.views}}</div>
-        <div class="views" *ngIf="channel.state === 'offline'">{{channel.state}}</div>
+        <div *ngFor="let channel of channels" class="channel">
+            <div class="channel-div">
+                <div>
+                    <img class="avatar" src={{channel.avatar}} alt={{channel.name}} [ngClass]="{ 'offline': channel.state === 'offline' }">
+                </div>
+                <div class="about">
+                    <div class="name">{{channel.name}}</div>
+                    <div class="category">{{channel.category}}</div>
+                </div>
+            </div>
+            <div class="views" *ngIf="channel.state === 'live'"><div class="live"></div>{{channel.views}}</div>
+            <div class="views" *ngIf="channel.state === 'offline'">{{channel.state}}</div>
+        </div>
     </div>
     <div class="channels">
         <h4>Chaînes recommandées</h4>
