@@ -4,7 +4,7 @@
             <h4>Chaînes suivis</h4>
         </div>
         <div *ngFor="let channel of channels" class="channel">
-            <div class="channel-div">
+            <div class="channel-div" routerLink="/stream/{{channel.name}}">
                 <div>
                     <img class="avatar" src={{channel.avatar}} alt={{channel.name}} [ngClass]="{ 'offline': channel.state === 'offline' }">
                 </div>
@@ -21,7 +21,7 @@
         <h4>Chaînes recommandées</h4>
     </div>
     <div *ngFor="let channel of channels" class="channel">
-        <div class="channel-div">
+        <div class="channel-div" routerLink="/stream/{{channel.name}}">
             <div>
                 <img class="avatar" src={{channel.avatar}} alt={{channel.name}} [ngClass]="{ 'offline': channel.state === 'offline' }">
             </div>

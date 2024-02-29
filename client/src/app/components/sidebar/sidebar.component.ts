@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { AuthService } from '../../services/authentication/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [ NgFor, NgIf, NgClass, HttpClientModule],
+  imports: [ NgFor, NgIf, NgClass, HttpClientModule, RouterLink],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
   providers: [AuthService]
