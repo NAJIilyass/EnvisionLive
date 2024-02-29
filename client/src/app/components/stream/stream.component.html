@@ -1,5 +1,32 @@
-<p>stream works!</p>
-<p>on stream {{streamId}}</p>
-<p>on category {{stream.category}}</p>
-<p>views {{stream.views}}</p>
-<p>name {{stream.name}}</p>
+<div class="stream-container">
+    <div class="stream-content">
+        <div class="stream-live">
+            live
+        </div>
+        <div class="stream-live-info">
+            <div class="user-info">
+                <div>
+                    <img src={{stream.avatar}} class="user-avatar" alt="user profile" [ngClass]="{ 'live': stream.state === 'live' }">
+                </div>
+                <div class="stream-title">
+                    <p class="stream-title-name">{{stream.name}}</p>
+                    <p class="stream-title-category">{{stream.category}}</p>
+                </div>
+                <div class="stream-views">
+                    <div class="views">{{stream.views}} <ng-icon name="heroUser"></ng-icon></div>
+                    <div>
+                        <button class="follow-button"><ng-icon name="heroHeart"></ng-icon>suivre</button>
+                    </div>
+                </div>
+            </div>
+            <div class="about-streamer">
+                <p class="about-streamer-title">Concernant {{stream.name}}</p>
+                <div class="about-streamer-container">
+                    <p>Streamer Followers</p>
+                    <p>Streamer bio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stream-chat">chat</div>
+</div>

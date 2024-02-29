@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StreamService } from '../../services/stream/stream.service';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { heroUser, heroHeart } from '@ng-icons/heroicons/outline';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-stream',
   standalone: true,
-  imports: [],
+  imports: [NgIconComponent, NgClass],
   templateUrl: './stream.component.html',
   styleUrl: './stream.component.css',
-  providers: [StreamService]
+  providers: [StreamService],
+  viewProviders: [provideIcons({ heroUser, heroHeart })],
 })
 export class StreamComponent implements OnInit {
   streamId!: string;
