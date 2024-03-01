@@ -8,6 +8,7 @@
     font-size: large;
     height: 10vh;
     width: 100%;
+    position: fixed;
 }
 .nav-links{
     display: flex;
@@ -49,4 +50,8 @@
 }
 .login{
     background-color: var(--third-color);
+}
+mat-menu.header-user-menu{
+    background-color: var(--third-color);
+    color: #fff;
 }

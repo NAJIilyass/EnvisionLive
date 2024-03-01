@@ -1,7 +1,7 @@
 <nav class="header">
     <div>
         <ul class="nav-links">
-            <li class="logo">EnvisionLive</li>
+            <li class="logo" routerLink="/">EnvisionLive</li>
             <li *ngIf="authService.isLoggedIn" class="nav-link">Suivis</li>
             <li class="nav-link">Parcourir</li>
             <li>
@@ -16,8 +16,12 @@
         <ul class="nav-icons">
             <li><ng-icon name="heroSun"></ng-icon></li>
             <li><ng-icon name="heroChatBubbleBottomCenter"></ng-icon></li>
-            <li><ng-icon name="heroUser"></ng-icon></li>
+            <li><ng-icon name="heroUser" [matMenuTriggerFor]="menu"></ng-icon></li>
         </ul>
+        <mat-menu #menu="matMenu" class="header-user-menu">
+            <button mat-menu-item><ng-icon name="heroUser"></ng-icon>User</button>
+            <button (click)="logoutUser()" mat-menu-item><ng-icon name="heroArrowLeftStartOnRectangle"></ng-icon>Deconnexion</button>
+        </mat-menu>
     </div>
     <div *ngIf="!authService.isLoggedIn" class="nav-buttons">
         <button class="login" (click)="openLoginDialog()">Se connecter</button>
