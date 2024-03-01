@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.security.Principal;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -34,5 +35,10 @@ public class UserService {
 
         // save the new password
         repository.save(user);
+    }
+
+    public Optional<User> getUserDataByEmail(String email) {
+        Optional<User> user = repository.findByEmail(email);
+        return user;
     }
 }
